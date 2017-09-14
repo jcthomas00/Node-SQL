@@ -8,4 +8,4 @@ I'm planning on building an Amazon-killer by creating a CLI JavaScript applicati
 	- Enter one of the listed item's id
 	- Enter the quantity of the item you'd like to see your total
 	
-	![Image of Bamazon](http://g.recordit.co/6Um8N7qwGv.gif)
+	![Image of Bamazon](bamazon.gif)
