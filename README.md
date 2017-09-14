@@ -7,4 +7,5 @@ I'm planning on building an Amazon-killer by creating a CLI JavaScript applicati
 3. Run `node bamazonCustomer.js` in your command line to run the program
 	- Enter one of the listed item's id
 	- Enter the quantity of the item you'd like to see your total
-	![Image of Jacob's Bamazon Running](http://g.recordit.co/6Um8N7qwGv.gif)
+	
+	![Image of Bamazon](http://g.recordit.co/6Um8N7qwGv.gif)
