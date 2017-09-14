@@ -21,8 +21,7 @@ Bamazon.prototype.queryProducts = function(sql = "select * from products", callb
 							callback(data, options);
 						} else{
 							callback(data);
-												this.buySomething();
-
+							this.buySomething();
 						}
 					}
 				}
@@ -33,7 +32,6 @@ Bamazon.prototype.queryProducts = function(sql = "select * from products", callb
 Bamazon.prototype.stockCheck = function(dataset, parameters) {
 	if(dataset.length > 0){
 		let query = `Update products set stock_quantity = ${dataset[0].stock_quantity-parameters.quantity} where item_id = ${parameters.id}`;
-	console.log(parameters.self);
 		parameters.self.queryProducts(query);
 		console.log(`Your order total is: $${parameters.quantity*dataset[0].price}`);
 	}else{
@@ -45,16 +43,15 @@ Bamazon.prototype.buySomething = function() {
 	inquirer.prompt([
 		{
 			name: "productID",
-			message: "Please enter the item id you would like to purchase"
+			message: "Please enter the item id you would like to purchase:"
 		},
 		{
 			name: "productQuantity",
-			message: "Please enter the item id you would like to purchase"
+			message: "How many would you like?"
 		}
 	]).then((res)=>{
 		let query = `select * from products where item_id = ${res.productID} AND stock_quantity > ${res.productQuantity-1}`;
 		this.queryProducts(query, this.stockCheck, {'quantity':res.productQuantity, 'id':res.productID, 'self': this});
-		//console.log(res.productID + res.productQuantity);
 	});
 };
 
