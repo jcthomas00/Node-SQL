@@ -1,0 +1,17 @@
+{
+  "name": "node-sql",
+  "version": "1.0.0",
+  "description": "Node and MySQL Happy Together Forever",
+  "main": "bamazonCustomer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jacob Thomas",
+  "license": "ISC",
+  "dependencies": {
+    "console.table": "^0.9.1",
+    "inquirer": "^3.2.3",
+    "mysql": "^2.14.1",
+    "sql": "^0.78.0"
+  }
+}
